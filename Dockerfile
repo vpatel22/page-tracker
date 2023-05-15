@@ -43,7 +43,7 @@ ENV PATH="$VIRTUALENV/bin:$PATH"
 COPY --from=builder /home/tracker/dist/page_tracker*.whl /home/tracker
 
 
-RUN python -m pip install --upgrade pip setuptools &&  \
+RUN python -m pip install --upgrade pip setuptools && \
     python -m pip install --no-cache-dir page_tracker*.whl /home/tracker
 
 CMD ["flask", "--app", "page_tracker.app", "run", \
