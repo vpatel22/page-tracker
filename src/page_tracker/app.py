@@ -10,7 +10,8 @@ app = Flask(__name__)
 @app.get("/")
 def index():
     """
-    The home function that returns the number of page views from Redis (if available)
+    The home function that returns the number of page views from Redis
+    (if available)
     """
     try:
         page_views = redis().incr("page_views")
