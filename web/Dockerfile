@@ -15,8 +15,8 @@ COPY --chown=tracker pyproject.toml constraints.txt ./
 RUN python -m pip install --upgrade pip setuptools && \
     python -m pip install --no-cache-dir -c constraints.txt ".[dev]"
 
-COPY --chown=tracker src/ src/
-COPY --chown=tracker test/ test/
+COPY --chown=tracker src src/
+COPY --chown=tracker test test/
 
 RUN python -m pip install . -c constraints.txt && \
     python -m pytest test/unit/ && \
