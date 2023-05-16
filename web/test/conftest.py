@@ -22,7 +22,7 @@ def http_client():
 
 
 @pytest.fixture(scope="module")
-def redis_client(redis_url: str = None):
+def redis_client(redis_url):
     if redis_url:
         return redis.Redis.from_url(redis_url)
     return redis.Redis()
