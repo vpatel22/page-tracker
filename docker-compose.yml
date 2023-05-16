@@ -36,7 +36,7 @@ services:
       --flask-url $$FLASK_URL'
 
 networks:
-  backend-network:
+    backend-network:
 
 volumes:
   redis-volume:
