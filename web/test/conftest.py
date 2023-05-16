@@ -4,16 +4,16 @@ import redis
 from page_tracker.app import app
 
 def pytest_addoption(parser):
-    parser.addoption("--flask_url")
-    parser.addoption("--redis_url")
+    parser.addoption("--flask-url")
+    parser.addoption("--redis-url")
 
 @pytest.fixture(scope="session")
 def flask_url(request):
-    return request.config.getoption("--flask_url")
+    return request.config.getoption("--flask-url")
 
 @pytest.fixture(scope="session")
 def redis_url(request):
-    return request.config.getoption("--redis_url")
+    return request.config.getoption("--redis-url")
 
 
 @pytest.fixture
