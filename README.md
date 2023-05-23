@@ -7,4 +7,4 @@ The services are set up in docker containers and can be spun up using the [docke
 It also contains some basic tests (unit, integration, and end-to-end) as well as a Github Actions workflow that runs on the
 creation of any pull request or merge back into the main branch.
 
-This was created using the tutorial from [realpython](https://realpython.com/docker-continuous-integration/)
+This was created using the tutorial from [realpython](https://realpython.com/docker-continuous-integration/).
